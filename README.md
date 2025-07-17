@@ -9,12 +9,14 @@ The test plan sends GET requests to the `/posts` endpoint with different `userId
 - `load_test.jmx` — JMeter test plan file
 - `user_data.csv` — CSV file with `userId` values for parameterization
 - `README.md` — This documentation file
+- Blazemeter Reports
 
 ## Prerequisites
 - [Apache JMeter](https://jmeter.apache.org/) installed on your machine.
+- BlazeMeter account
 - Basic familiarity with running JMeter test plans.
 
-## How to Run
+## How to Run Locally
 1. Clone this repository or download the files.
 2. Open `load_test.jmx` in JMeter GUI.
 3. Ensure the CSV file `user_data.csv` is in the same directory as the `.jmx` file or update the path in CSV Data Set Config.
@@ -36,3 +38,46 @@ The test plan sends GET requests to the `/posts` endpoint with different `userId
 ## Notes
 - This is a beginner-friendly example for learning JMeter load testing.
 - The target API is a public fake API for testing purposes.
+
+---
+
+## How to Run This Test on BlazeMeter
+
+### 1. Log in to BlazeMeter
+Visit [https://a.blazemeter.com](https://a.blazemeter.com) and sign in with your account.
+
+### 2. Create a New Test
+Click **Create Test** → **Performance Test**.
+
+### 3. Upload Test Files
+Upload the following files in the **Test Script** section:
+- `load_test.jmx`
+- `user_data.csv`
+
+Make sure they are both selected and uploaded before proceeding.
+
+### 4. Configure Test Parameters
+Adjust the following based on your test goals:
+- Number of Virtual Users
+- Ramp-Up Time
+- Test Duration
+- Geo-locations (optional)
+
+### 5. Start the Test
+Click the **Run Test** button to execute your test plan in the cloud.
+
+### 6. Monitor and Analyze Results
+Use the built-in BlazeMeter dashboard to analyze:
+- Response times
+- Throughput
+- Error rates
+- Percentile distributions
+
+You can view detailed reports via the **Summary**, **Timeline**, and **Errors** tabs.
+
+### 7. Export Reports
+After the test:
+- Click **Download Report**
+- Export in **PDF**, **CSV**, or **JSON** format for documentation
+
+
